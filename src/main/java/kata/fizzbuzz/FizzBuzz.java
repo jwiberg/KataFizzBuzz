@@ -4,15 +4,13 @@ public class FizzBuzz {
 	public String[] getArrayAnswer(int lastNumber) {
 		String[] answer = new String[lastNumber];
 		for (int i = 1; i <= lastNumber; i++) {
-			if (isDividedBy3(i) && isDividedBy5(i)) {
-				answer[i - 1] = "FizzBuzz";
-			} else if (isDividedBy3(i)) {
-				answer[i - 1] = "Fizz";
-			} else if (isDividedBy5(i)) {
-				answer[i - 1] = "Buzz";
-			} else {
-				answer[i - 1] = Integer.toString(i);
-			}
+			answer[i - 1] = "";
+			if (isDividedBy3(i))
+				answer[i - 1] += "Fizz";
+			if (isDividedBy5(i))
+				answer[i - 1] += "Buzz";
+			if (answer[i - 1].length() == 0)
+				answer[i - 1] += i;
 		}
 		return answer;
 	}
