@@ -1,6 +1,7 @@
 package kata.fizzbuzz;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Before;
@@ -29,6 +30,9 @@ public class FizzBuzzTest {
 				fizzBuzz.getArrayAnswer(3));
 		assertArrayEquals(new String[] { "1", "2", "Fizz", "4" },
 				fizzBuzz.getArrayAnswer(4));
+		assertArrayEquals(new String[] { "1", "2", "Fizz", "4", "Buzz" },
+				fizzBuzz.getArrayAnswer(5));
+		assertEquals("FizzBuzz", fizzBuzz.getArrayAnswer(15)[14]);
 	}
 
 }
